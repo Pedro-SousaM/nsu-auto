@@ -7,9 +7,10 @@ const LOTE = 20; // Limite SEFAZ por hora
 const CONFIG = {
     token: process.env.ACCESS_TOKEN,
     cnpj: process.env.CPF_CNPJ,
-    ambiente: 'producao',
-    atual: 7800,
-    fim: 8263
+    uf: process.env.UF,
+    ambiente: process.env.AMBIENTE,
+    atual: parseInt(process.env.NSU_ATUAL),
+    fim: parseInt(process.env.NSU_FIM)
 };
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
